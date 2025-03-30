@@ -19,7 +19,7 @@ class LLM_with_Image():
             },
         ]
 
-
+    # MAIN 대화 메서드
     def Talking_with_Image(self, image:Union[bytes, str], user_input:str, need_save_conversation_log:bool=False)->str:
 
         # 이미지 -> base64 변환
@@ -100,7 +100,7 @@ class LLM_with_Image():
         image.save(buffered, format="JPEG")  # You can change the format if needed
         return base64.b64encode(buffered.getvalue()).decode("utf-8")
 
-file_path = "screen3.jpg"
+file_path = "screen2.jpg" # 샘플 민증 사진 
 
 
 # 아래 LLM은 제미나이 용, 물론 다른 LLM 도 가능하다 랭체인 기반이라면!
